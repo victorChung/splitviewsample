@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576BA4641CFD4883001873EA /* Modal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 576BA4621CFD4883001873EA /* Modal.xcdatamodeld */; };
+		576BA4671CFD493C001873EA /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576BA4661CFD493C001873EA /* CoreDataViewController.m */; };
+		576BA46D1CFD4EF3001873EA /* MyEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 576BA46A1CFD4EF3001873EA /* MyEntity+CoreDataProperties.m */; };
+		576BA46E1CFD4EF3001873EA /* MyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 576BA46C1CFD4EF3001873EA /* MyEntity.m */; };
 		57D37A381CE4D8D2001547EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37A371CE4D8D2001547EB /* main.m */; };
 		57D37A3B1CE4D8D2001547EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37A3A1CE4D8D2001547EB /* AppDelegate.m */; };
 		57D37A3E1CE4D8D2001547EB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37A3D1CE4D8D2001547EB /* MasterViewController.m */; };
@@ -46,6 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576BA4631CFD4883001873EA /* Modal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Modal.xcdatamodel; sourceTree = "<group>"; };
+		576BA4651CFD493C001873EA /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataViewController.h; path = splitviewsample/CoreDataViewController.h; sourceTree = SOURCE_ROOT; };
+		576BA4661CFD493C001873EA /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataViewController.m; path = splitviewsample/CoreDataViewController.m; sourceTree = SOURCE_ROOT; };
+		576BA4691CFD4EF3001873EA /* MyEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MyEntity+CoreDataProperties.h"; path = "splitviewsample/MyEntity+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
+		576BA46A1CFD4EF3001873EA /* MyEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MyEntity+CoreDataProperties.m"; path = "splitviewsample/MyEntity+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
+		576BA46B1CFD4EF3001873EA /* MyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyEntity.h; path = splitviewsample/MyEntity.h; sourceTree = SOURCE_ROOT; };
+		576BA46C1CFD4EF3001873EA /* MyEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyEntity.m; path = splitviewsample/MyEntity.m; sourceTree = SOURCE_ROOT; };
 		57D37A331CE4D8D2001547EB /* splitViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D37A371CE4D8D2001547EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57D37A391CE4D8D2001547EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576BA4681CFD4ED5001873EA /* MyData */ = {
+			isa = PBXGroup;
+			children = (
+				576BA4691CFD4EF3001873EA /* MyEntity+CoreDataProperties.h */,
+				576BA46A1CFD4EF3001873EA /* MyEntity+CoreDataProperties.m */,
+				576BA46B1CFD4EF3001873EA /* MyEntity.h */,
+				576BA46C1CFD4EF3001873EA /* MyEntity.m */,
+			);
+			name = MyData;
+			sourceTree = "<group>";
+		};
 		57D37A2A1CE4D8D2001547EB = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +156,7 @@
 		57D37A351CE4D8D2001547EB /* splitViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				576BA4681CFD4ED5001873EA /* MyData */,
 				57D37A721CE4D92C001547EB /* MyView */,
 				57D37A391CE4D8D2001547EB /* AppDelegate.h */,
 				57D37A3A1CE4D8D2001547EB /* AppDelegate.m */,
@@ -147,6 +170,7 @@
 				57D37A4A1CE4D8D2001547EB /* Info.plist */,
 				57FBA2B41CE9DBEC00277C34 /* Sample.plist */,
 				57D37A361CE4D8D2001547EB /* Supporting Files */,
+				576BA4621CFD4883001873EA /* Modal.xcdatamodeld */,
 			);
 			path = splitViewSample;
 			sourceTree = "<group>";
@@ -199,6 +223,8 @@
 				57FBA2BA1CEAF78F00277C34 /* DataIOViewController.m */,
 				57FBA2BC1CEB005900277C34 /* UserDefaultsViewController.h */,
 				57FBA2BD1CEB005900277C34 /* UserDefaultsViewController.m */,
+				576BA4651CFD493C001873EA /* CoreDataViewController.h */,
+				576BA4661CFD493C001873EA /* CoreDataViewController.m */,
 			);
 			name = MyView;
 			sourceTree = "<group>";
@@ -340,10 +366,14 @@
 				57D37A3B1CE4D8D2001547EB /* AppDelegate.m in Sources */,
 				57D37A3E1CE4D8D2001547EB /* MasterViewController.m in Sources */,
 				57FBA2B81CE9DDF100277C34 /* PListViewController.m in Sources */,
+				576BA4641CFD4883001873EA /* Modal.xcdatamodeld in Sources */,
 				57D37A711CE4D923001547EB /* RecognizerViewController.m in Sources */,
 				57FBA2151CE5787600277C34 /* UISViewController.m in Sources */,
+				576BA46E1CFD4EF3001873EA /* MyEntity.m in Sources */,
+				576BA46D1CFD4EF3001873EA /* MyEntity+CoreDataProperties.m in Sources */,
 				57FBA2BE1CEB005900277C34 /* UserDefaultsViewController.m in Sources */,
 				57FBA2261CE6E24000277C34 /* DelegationViewController.m in Sources */,
+				576BA4671CFD493C001873EA /* CoreDataViewController.m in Sources */,
 				57FBA21B1CE63BB400277C34 /* ModalNotifViewController.m in Sources */,
 				57FBA2181CE6392400277C34 /* PresentationViewController.m in Sources */,
 				57D37A381CE4D8D2001547EB /* main.m in Sources */,
@@ -598,6 +628,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		576BA4621CFD4883001873EA /* Modal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				576BA4631CFD4883001873EA /* Modal.xcdatamodel */,
+			);
+			currentVersion = 576BA4631CFD4883001873EA /* Modal.xcdatamodel */;
+			name = Modal.xcdatamodeld;
+			path = ../splitviewsample/Modal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 57D37A2B1CE4D8D2001547EB /* Project object */;
 }
