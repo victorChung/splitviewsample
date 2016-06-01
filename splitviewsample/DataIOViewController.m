@@ -8,6 +8,7 @@
 
 #import "DataIOViewController.h"
 #import "PListViewController.h"
+#import "CoreDataViewController.h"
 
 @interface DataIOViewController ()
 
@@ -45,7 +46,6 @@
     NSLayoutConstraint *CoreDataTop=[NSLayoutConstraint constraintWithItem:CoreData attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:PList attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
     NSLayoutConstraint *CoreDataLeft=[NSLayoutConstraint constraintWithItem:CoreData attribute:NSLayoutAttributeLeftMargin relatedBy:NSLayoutRelationEqual toItem:PList attribute:NSLayoutAttributeRightMargin multiplier:1.0 constant:40];
     
-    
     [NSLayoutConstraint activateConstraints:@[btnReadTop,btnReadLeading,CoreDataTop,CoreDataLeft]];
 }
 
@@ -56,7 +56,8 @@
 }
 
 -(IBAction)ShowCoreData:(id)sender{
-
+    CoreDataViewController *cd=[[CoreDataViewController alloc]init];
+    [self.navigationController pushViewController:cd  animated:YES];
 }
 
 
