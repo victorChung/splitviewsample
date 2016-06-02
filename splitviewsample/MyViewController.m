@@ -24,6 +24,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (instancetype)init{
+    if (self=[super init]) {
+        if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        {
+            self.edgesForExtendedLayout = UIRectEdgeNone;
+        }
+    }
+    return self;
+}
+
 /*
 #pragma mark - Navigation
 

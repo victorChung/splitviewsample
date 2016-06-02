@@ -68,7 +68,7 @@
     lab1.translatesAutoresizingMaskIntoConstraints=NO;
     NSLayoutConstraint *lab1Leading=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:16];
 //    NSLayoutConstraint *lab1Trailing=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:16];
-    NSLayoutConstraint *lab1Top=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *lab1Top=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:20];
     NSLayoutConstraint *lab1Width=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:0.4 constant:0];
     
     self.labTips.translatesAutoresizingMaskIntoConstraints=NO;

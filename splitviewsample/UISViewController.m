@@ -177,11 +177,11 @@
     //add Constraint
     lab1.translatesAutoresizingMaskIntoConstraints=NO;
     NSLayoutConstraint *lab1Leading=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeLeadingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
-    NSLayoutConstraint *lab1Top=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *lab1Top=[NSLayoutConstraint constraintWithItem:lab1 attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:20];
     
     swt.translatesAutoresizingMaskIntoConstraints=NO;
     NSLayoutConstraint *swtTrailing=[NSLayoutConstraint constraintWithItem:swt attribute:NSLayoutAttributeTrailingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
-    NSLayoutConstraint *swtTop=[NSLayoutConstraint constraintWithItem:swt attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *swtTop=[NSLayoutConstraint constraintWithItem:swt attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:lab1 attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:0];
     NSLayoutConstraint *swtLeft=[NSLayoutConstraint constraintWithItem:swt attribute:NSLayoutAttributeLeftMargin relatedBy:NSLayoutRelationEqual toItem:lab1 attribute:NSLayoutAttributeRightMargin multiplier:1.0 constant:20];
     
     

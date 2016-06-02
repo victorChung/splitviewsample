@@ -60,7 +60,7 @@
     
     //add Constraint
     labKey.translatesAutoresizingMaskIntoConstraints=NO;
-    NSLayoutConstraint *labKeyTop=[NSLayoutConstraint constraintWithItem:labKey attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *labKeyTop=[NSLayoutConstraint constraintWithItem:labKey attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:20];
     NSLayoutConstraint *labKeyLeading=[NSLayoutConstraint constraintWithItem:labKey attribute:NSLayoutAttributeLeadingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
     NSLayoutConstraint *labKeyWidth=[NSLayoutConstraint constraintWithItem:labKey attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:175];
     
