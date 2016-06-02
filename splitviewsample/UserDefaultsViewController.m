@@ -26,7 +26,7 @@
     
     //add Constraint
     txtField.translatesAutoresizingMaskIntoConstraints=NO;
-    NSLayoutConstraint *txtFieldTop=[NSLayoutConstraint constraintWithItem:txtField attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *txtFieldTop=[NSLayoutConstraint constraintWithItem:txtField attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:20];
     NSLayoutConstraint *txtFieldLeading=[NSLayoutConstraint constraintWithItem:txtField attribute:NSLayoutAttributeLeadingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
     NSLayoutConstraint *txtFieldTrailing=[NSLayoutConstraint constraintWithItem:txtField attribute:NSLayoutAttributeTrailingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.0 constant:0];
     

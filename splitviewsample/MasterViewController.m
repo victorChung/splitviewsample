@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 
 @interface MasterViewController ()
-
+@property NSArray *arrClass;
 @property NSMutableArray *objects;
 @end
 
@@ -25,9 +25,16 @@
 //    self.navigationItem.rightBarButtonItem = addButton;
 //    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    self.dictItem=[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"RecognizerViewController",@"Recognizer",@"UISViewController",@"UI",@"PresentationViewController",@"PresentationView",@"AFNetworkingViewController",@"AFNetworking",nil];
+//    self.dictItem=[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"RecognizerViewController",@"Recognizer",@"UISViewController",@"UI",@"PresentationViewController",@"PresentationView",@"AFNetworkingViewController",@"AFNetworking",nil];
 //    self.arrItem =[self.dictItem allKeys];
-    self.arrItem=@[@"Recognizer",@"UI",@"PresentationView",@"Data IO",@"AFNetworking"];
+//    self.arrItem=@[@"Recognizer",@"UI",@"PresentationView",@"Data IO",@"AFNetworking"];
+    
+    self.arrItem=@[
+                   [[NSDictionary alloc] initWithObjectsAndKeys:@"RecognizerViewController",@"class",@"Recognizer",@"name", nil],
+                   [[NSDictionary alloc] initWithObjectsAndKeys:@"UISViewController",@"class",@"UI",@"name", nil],
+                   [[NSDictionary alloc] initWithObjectsAndKeys:@"PresentationViewController",@"class",@"PresentationView",@"name", nil],
+                   [[NSDictionary alloc] initWithObjectsAndKeys:@"AFNetworkingViewController",@"class",@"AFNetworking",@"name", nil]
+                   ];
     
 }
 
@@ -75,7 +82,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = self.arrItem[indexPath.row];
+//    cell.textLabel.text = self.arrItem[indexPath.row];
+    cell.textLabel.text = [self.arrItem[indexPath.row] objectForKey:@"name"];
     return cell;
 }
 
@@ -94,33 +102,38 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    MyViewController *myVC;
-    switch (indexPath.row) {
-        case 0:{
-            myVC=[[RecognizerViewController alloc]init];
-            [self loadToNavigation:myVC title:@"Recognizer"];
-            break;
-        }
-        case 1:{
-            myVC=[[UISViewController alloc] init];
-            [self loadToNavigation:myVC title:@"UI"];
-            break;
-        }
-        case 2:{
-            myVC=[[PresentationViewController alloc] init];
-            [self loadToNavigation:myVC title:@"Presentation"];
-            break;
-        }
-        case 3:{
-            myVC=[[DataIOViewController alloc] init];
-            [self loadToNavigation:myVC title:@"Data IO"];
-            break;
-        }
-            
-        default:
-            break;
-    }
+//    MyViewController *myVC;
+//    switch (indexPath.row) {
+//        case 0:{
+//            Class class=NSClassFromString(self.arrClass[indexPath.row]);
+//            myVC=class.new;
+////            myVC=[[RecognizerViewController alloc]init];
+//            [self loadToNavigation:myVC title:@"Recognizer"];
+//            break;
+//        }
+//        case 1:{
+//            myVC=[[UISViewController alloc] init];
+//            [self loadToNavigation:myVC title:@"UI"];
+//            break;
+//        }
+//        case 2:{
+//            myVC=[[PresentationViewController alloc] init];
+//            [self loadToNavigation:myVC title:@"Presentation"];
+//            break;
+//        }
+//        case 3:{
+//            myVC=[[DataIOViewController alloc] init];
+//            [self loadToNavigation:myVC title:@"Data IO"];
+//            break;
+//        }
+//            
+//        default:
+//            break;
+//    }
     
+    Class class=NSClassFromString([self.arrItem[indexPath.row] objectForKey:@"class"]);
+    MyViewController *myVC=class.new;
+    [self loadToNavigation:myVC title:[self.arrItem[indexPath.row] objectForKey:@"name"]];
 }
 
 

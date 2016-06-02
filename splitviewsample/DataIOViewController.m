@@ -39,7 +39,7 @@
     
     //add Constraint
     PList.translatesAutoresizingMaskIntoConstraints=NO;
-    NSLayoutConstraint *btnReadTop=[NSLayoutConstraint constraintWithItem:PList attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:84];
+    NSLayoutConstraint *btnReadTop=[NSLayoutConstraint constraintWithItem:PList attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0 constant:20];
     NSLayoutConstraint *btnReadLeading=[NSLayoutConstraint constraintWithItem:PList attribute:NSLayoutAttributeLeadingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0];
     
     CoreData.translatesAutoresizingMaskIntoConstraints=NO;
