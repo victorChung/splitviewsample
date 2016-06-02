@@ -102,35 +102,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    MyViewController *myVC;
-//    switch (indexPath.row) {
-//        case 0:{
-//            Class class=NSClassFromString(self.arrClass[indexPath.row]);
-//            myVC=class.new;
-////            myVC=[[RecognizerViewController alloc]init];
-//            [self loadToNavigation:myVC title:@"Recognizer"];
-//            break;
-//        }
-//        case 1:{
-//            myVC=[[UISViewController alloc] init];
-//            [self loadToNavigation:myVC title:@"UI"];
-//            break;
-//        }
-//        case 2:{
-//            myVC=[[PresentationViewController alloc] init];
-//            [self loadToNavigation:myVC title:@"Presentation"];
-//            break;
-//        }
-//        case 3:{
-//            myVC=[[DataIOViewController alloc] init];
-//            [self loadToNavigation:myVC title:@"Data IO"];
-//            break;
-//        }
-//            
-//        default:
-//            break;
-//    }
-    
     Class class=NSClassFromString([self.arrItem[indexPath.row] objectForKey:@"class"]);
     MyViewController *myVC=class.new;
     [self loadToNavigation:myVC title:[self.arrItem[indexPath.row] objectForKey:@"name"]];
